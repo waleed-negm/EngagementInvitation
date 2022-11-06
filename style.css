@@ -1,10 +1,27 @@
 * {
-    box-sizing: border-box;
     font-family: "Dancing Script", cursive;
+    scroll-behavior: smooth;
 }
 body {
     height: 100vh;
 }
 .border {
-    border: 1px solid black;
+    border: 1px solid black !important;
+}
+.red {
+    border-color: red !important;
+}
+.green {
+    border-color: green !important;
+}
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 100%;
+}
+
+.mapouter {
+    position: relative;
+    text-align: right;
+    height: 500px;
 }
