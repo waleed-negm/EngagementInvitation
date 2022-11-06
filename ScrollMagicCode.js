@@ -1,13 +1,12 @@
-// $(function () {
-// 	var controller = new ScrollMagic.Controller({ globalSceneOptions: { triggerHook: 'onLeave', duration: '100%' } });
-// 	var slides = document.querySelectorAll('section.panel');
-// 	for (var i = 0; i < slides.length; i++)
-// 		new ScrollMagic.Scene({ triggerElement: slides[i] }).setPin(slides[i], { pushFollowers: false }).addTo(controller);
-// });
+$(function () {
+	var controller = new ScrollMagic.Controller({ globalSceneOptions: { triggerHook: 'onLeave', duration: '100%' } });
+	var slides = document.querySelectorAll('section.panel');
+	for (var i = 0; i < slides.length; i++)
+		new ScrollMagic.Scene({ triggerElement: slides[i] }).setPin(slides[i], { pushFollowers: false }).addTo(controller);
+});
 
 const countdown = () => {
 	const countDate = new Date('December 1,2022 19:00:00').getTime();
-	//const countDate = new Date('November 6,2022 23:5:00').getTime();
 	const now = new Date().getTime();
 	const gap = countDate - now;
 	const second = 1000;
