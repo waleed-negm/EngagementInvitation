@@ -1,18 +1,14 @@
 // init controller
-var controller = new ScrollMagic.Controller();
-new ScrollMagic.Scene({ offset: 0, triggerHook: 'onLeave', duration: '2000', triggerElement: 'section.panel' }).setPin('section.panel', { pushFollowers: true }).addTo(controller);
+// var controller = new ScrollMagic.Controller();
+// new ScrollMagic.Scene({ offset: 0, triggerHook: 'onLeave', duration: '2000', triggerElement: 'section.panel' }).setPin('section.panel', { pushFollowers: true }).addTo(controller);
 //-----------------------------------------------------------------------------------------------
 const myPath = document.querySelector('#word');
 var length = myPath.getTotalLength();
-console.log('length:' + length);
 myPath.style.strokeDasharray = length;
 myPath.style.strokeDashoffset = length;
 window.addEventListener('scroll', () => {
 	var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-	console.log('scrollPercentage:' + Math.round(scrollPercentage, 2));
-	console.log('strokeDashoffset:' + myPath.style.strokeDashoffset);
 	var drawLength = length * scrollPercentage;
-	console.log('drawLength:' + drawLength);
 	myPath.style.strokeDashoffset = length - drawLength;
 });
 //-----------------------------------------------------------------------------------------------
