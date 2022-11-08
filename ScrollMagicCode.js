@@ -1,16 +1,20 @@
-// init controller
-// var controller = new ScrollMagic.Controller();
-// new ScrollMagic.Scene({ offset: 0, triggerHook: 'onLeave', duration: '2000', triggerElement: 'section.panel' }).setPin('section.panel', { pushFollowers: true }).addTo(controller);
-//-----------------------------------------------------------------------------------------------
+// @ts-nocheck
+var controller = new ScrollMagic.Controller();
 const myPath = document.querySelector('#word');
 var length = myPath.getTotalLength();
 myPath.style.strokeDasharray = length;
 myPath.style.strokeDashoffset = length;
-window.addEventListener('scroll', () => {
-	var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-	var drawLength = length * scrollPercentage;
-	myPath.style.strokeDashoffset = length - drawLength;
-});
+//pin image
+new ScrollMagic.Scene({ triggerHook: 0, duration: '100%', tweenChanges: true, triggerElement: '.parallax' }).addIndicators().setPin('.parallax', { pushFollowers: true }).addTo(controller);
+//zoom out
+const tween2 = new TimelineMax().add(TweenMax.to('.img', 1, { backgroundSize: '130%', ease: Linear.Circ })).add(TweenMax.to('.img', 1, { ease: Linear.Circ }), 0);
+new ScrollMagic.Scene({ triggerHook: 0, duration: '100%', tweenChanges: true, triggerElement: '.parallax' }).addIndicators().setTween(tween2).addTo(controller);
+//draw path
+const tween = new TimelineMax().add(TweenMax.to(myPath, 1, { strokeDashoffset: 0, ease: Linear.Circ })).add(TweenMax.to(myPath, 1, { ease: Linear.Circ }), 0);
+new ScrollMagic.Scene({ triggerHook: 0, offset: 0, duration: 2500, tweenChanges: true, triggerElement: '.parallax' }).addIndicators().setTween(tween).addTo(controller);
+//blur
+const tween3 = new TimelineMax().add(TweenMax.to('.img', 1, { filter: 'blur(2px)', ease: Linear.Circ })).add(TweenMax.to('.img', 1, { ease: Linear.Circ }), 0);
+new ScrollMagic.Scene({ triggerHook: 0, duration: 2000, tweenChanges: true, triggerElement: '.parallax' }).addIndicators().setTween(tween3).addTo(controller);
 //-----------------------------------------------------------------------------------------------
 
 const countdown = () => {
