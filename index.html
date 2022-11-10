@@ -13,6 +13,7 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
         <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
         <link href="style.css" rel="stylesheet" />
     </head>
@@ -34,13 +35,46 @@
                         />
                     </g>
                 </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-chevron-compact-down scrolldownsvg" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
-                </svg>
+                <a href="#welcome">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-chevron-compact-down scrolldownsvg" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
+                    </svg>
+                </a>
             </div>
         </div>
         <main class="container text-center">
-            <section class="welcome row align-content-center align-items-center justify-content-center vh-100">
+            <section id="welcome" class="welcome row align-content-center align-items-center justify-content-center vh-100">
+                <div class="backsvg">
+                    <svg viewBox="0 0 640 800" opacity="0.26">
+                        <g fill="none" stroke-width="2" stroke="hsl(0, 82%, 35%)" stroke-linecap="round" transform="matrix(1.3,0,0,1.3,-96.00000457763673,-119.99999542236333)">
+                            <line x1="265" y1="400" x2="375" y2="400" transform="rotate(0, 320, 400)" opacity="0.41"></line>
+                            <line x1="455" y1="400" x2="185" y2="400" transform="rotate(23, 320, 400)" opacity="0.70"></line>
+                            <line x1="471" y1="400" x2="169" y2="400" transform="rotate(46, 320, 400)" opacity="0.43"></line>
+                            <line x1="321.5" y1="400" x2="318.5" y2="400" transform="rotate(69, 320, 400)" opacity="0.89"></line>
+                            <line x1="245.5" y1="400" x2="394.5" y2="400" transform="rotate(92, 320, 400)" opacity="0.61"></line>
+                            <line x1="527" y1="400" x2="113" y2="400" transform="rotate(115, 320, 400)" opacity="0.28"></line>
+                            <line x1="214" y1="400" x2="426" y2="400" transform="rotate(138, 320, 400)" opacity="0.94"></line>
+                            <line x1="47" y1="400" x2="593" y2="400" transform="rotate(161, 320, 400)" opacity="0.78"></line>
+                            <line x1="414.5" y1="400" x2="225.5" y2="400" transform="rotate(184, 320, 400)" opacity="0.69"></line>
+                            <line x1="179.5" y1="400" x2="460.5" y2="400" transform="rotate(207, 320, 400)" opacity="0.64"></line>
+                            <line x1="535.5" y1="400" x2="104.5" y2="400" transform="rotate(230, 320, 400)" opacity="0.77"></line>
+                            <line x1="465" y1="400" x2="175" y2="400" transform="rotate(253, 320, 400)" opacity="0.12"></line>
+                            <line x1="31" y1="400" x2="609" y2="400" transform="rotate(276, 320, 400)" opacity="0.46"></line>
+                            <line x1="340" y1="400" x2="300" y2="400" transform="rotate(299, 320, 400)" opacity="0.91"></line>
+                            <line x1="159.5" y1="400" x2="480.5" y2="400" transform="rotate(322, 320, 400)" opacity="0.44"></line>
+                            <line x1="471" y1="400" x2="169" y2="400" transform="rotate(345, 320, 400)" opacity="0.57"></line>
+                        </g>
+                    </svg>
+                </div>
+                <div class="backsvgline">
+                    <svg viewBox="0 0 77 735" fill="none" preserveAspectRatio="xMidYMax meet">
+                        <path
+                            id="welcomeline"
+                            d="M30 0C30 0.8 30 114.333 30 171C47.3333 175.667 71.6 187 30 195C-22 205 7 221 30 223C54.8 239 46.3333 247 39 249L5 272L76 311L30 360V429V735"
+                            stroke="black"
+                        />
+                    </svg>
+                </div>
                 <h2>hello!</h2>
                 <h3>we invite you to celebrate with us our engagement.</h3>
             </section>
@@ -74,15 +108,15 @@
             <section class="location text-center row align-content-center align-items-center justify-content-center vh-100">
                 <div class="col-md-6 align-content-center align-items-center justify-content-center">
                     <div class="row flex-column">
-                        <h3 class="col">adress</h3>
+                        <h3 class="col"><i class="bi bi-geo-alt"></i>&nbsp;adress</h3>
                         <h4 class="col">VIP hall,downtown port,suez</h4>
                     </div>
                     <div class="row flex-column">
-                        <h3 class="col">Date</h3>
+                        <h3 class="col"><i class="bi bi-calendar-heart"></i> &nbsp; Date</h3>
                         <h4 class="col">1 . December . 2022</h4>
                     </div>
                     <div class="row flex-column">
-                        <h3 class="col">Time</h3>
+                        <h3 class="col"><i class="bi bi-clock"></i> &nbsp; Time</h3>
                         <h4 class="col">07:00 pm</h4>
                     </div>
                 </div>
@@ -136,6 +170,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/CSSRulePlugin.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script>
         <script src="ScrollMagicCode.js"></script>
+        <script>
+            src = './ScrollMagicCode.js';
+        </script>
         <script></script>
     </body>
 </html>

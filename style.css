@@ -1,9 +1,10 @@
 * {
     font-family: 'Dancing Script', cursive;
+    scroll-behavior: smooth;
 }
 /* hero section */
 .herosvg {
-    width: 100%;
+    width: 90%;
 }
 .myimage {
     background-image: url(./images/heroCover.jpg);
@@ -31,6 +32,9 @@
 /* end hero section */
 
 /* welcome section */
+.welcome {
+    overflow: hidden;
+}
 .welcomeHeart {
     position: absolute;
     top: 50;
@@ -39,6 +43,26 @@
     height: 100%;
     padding: 1rem;
     width: 100%;
+}
+.backsvg {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.backsvgline {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: -2;
+    top: 0;
+    opacity: 0.3;
+    left: 0;
+}
+.backsvgline svg {
+    height: 100%;
 }
 /* end welcome section */
 

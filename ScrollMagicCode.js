@@ -1,5 +1,8 @@
 // @ts-nocheck
+
 var controller = new ScrollMagic.Controller();
+
+addEventListener('click', () => console.log('test'));
 //hero image
 //pin
 new ScrollMagic.Scene({triggerHook: 0, duration: 2500, tweenChanges: true, triggerElement: '.parallax'}).addIndicators().setPin('.parallax', {pushFollowers: true}).addTo(controller);
@@ -19,6 +22,13 @@ new ScrollMagic.Scene({triggerHook: 0, duration: 2000, tweenChanges: true, trigg
 //welcome
 //pin
 new ScrollMagic.Scene({triggerHook: 0, duration: '100%', tweenChanges: true, triggerElement: '.welcome'}).addIndicators().setPin('.welcome', {pushFollowers: true}).addTo(controller);
+//draw path
+const welcomePath = document.querySelector('#welcomeline');
+var welcomePathlength = welcomePath.getTotalLength();
+welcomePath.style.strokeDasharray = welcomePathlength;
+welcomePath.style.strokeDashoffset = welcomePathlength;
+const welcomePathtween = new TimelineMax().add(TweenMax.to(welcomePath, 1, {strokeDashoffset: 0, ease: Linear.Circ})).add(TweenMax.to(welcomePath, 1, {ease: Linear.Circ}), 0);
+new ScrollMagic.Scene({triggerHook: 0, duration: '100%', tweenChanges: true, triggerElement: '.welcome'}).addIndicators().setTween(welcomePathtween).addTo(controller);
 //pin hwm
 new ScrollMagic.Scene({triggerHook: 0, duration: '100%', tweenChanges: true, triggerElement: '.hwm'}).addIndicators().setPin('.hwm', {pushFollowers: true}).addTo(controller);
 //pin timer
