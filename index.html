@@ -15,16 +15,16 @@
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 		<link href="style.css" rel="stylesheet" />
 	</head>
 	<body>
 		<div class="parallax d-flex vh-100 w-100">
 			<div class="myimage"></div>
-			<div class="parallaxText d-flex justify-content-center align-content-center align-items-center flex-column text-center">
-				<h1>save the date</h1>
+			<div class="container parallaxText d-flex justify-content-center align-content-center align-items-center flex-column text-center">
 				<div class="row w-100 justify-content-center align-content-center align-items-center">
-					<h3 class="col pos">VIP hall <br />Downtown port</h3>
-					<h3 class="col">waleed and mouda</h3>
+					<h3 class="col pos">VIP hall <br />Downtown <br />port</h3>
+					<h2 class="col std">save the date</h3>
 					<h3 class="col date">December <br />1st <br />2022</h3>
 				</div>
 				<svg class="row herosvg" viewBox="0 0 370 40" preserveAspectRatio="xMidYMax meet">
@@ -232,17 +232,15 @@
 						/>
 					</g>
 				</svg>
-				<a href="#welcome">
-					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-chevron-compact-down scrolldownsvg" viewBox="0 0 16 16">
-						<path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
-					</svg>
+				<a href="#welcome" class="scrolldown row w-100 justify-content-center align-content-center align-items-center">
+					<img src="./assets/icon/scrolling_mousewheel2.gif" alt="" class="scrolldownsvg" />
 				</a>
 			</div>
 		</div>
 		<main class="container text-center">
 			<section id="welcome" class="welcome row align-content-center align-items-center justify-content-center vh-100">
 				<div class="backsvg">
-					<svg viewBox="0 0 640 800" opacity="0.26">
+					<svg viewBox="0 0 640 800" opacity="0.25" id="welcomebacksvg">
 						<g fill="none" stroke-width="2" stroke="hsl(0, 82%, 35%)" stroke-linecap="round" transform="matrix(1.3,0,0,1.3,-96.00000457763673,-119.99999542236333)">
 							<line x1="265" y1="400" x2="375" y2="400" transform="rotate(0, 320, 400)" opacity="0.41"></line>
 							<line x1="455" y1="400" x2="185" y2="400" transform="rotate(23, 320, 400)" opacity="0.70"></line>
@@ -264,25 +262,18 @@
 					</svg>
 				</div>
 				<div class="backsvgline">
-					<svg viewBox="0 0 77 735" fill="none" preserveAspectRatio="xMidYMax meet">
-						<path
-							id="welcomeline"
-							d="M30 0C30 0.8 30 114.333 30 171C47.3333 175.667 71.6 187 30 195C-22 205 7 221 30 223C54.8 239 46.3333 247 39 249L5 272L76 311L30 360V429V735"
-							stroke="black"
-						/>
-					</svg>
 				</div>
-				<h2>hello!</h2>
-				<h3>we invite you to celebrate with us our engagement.</h3>
+				<h2 data-aos="zoom-in" data-aos-offset="300">hello!</h2>
+				<h2 data-aos="zoom-in" data-aos-offset="300" class=" my-1" >we invite you to celebrate with us our engagement.</h3>
 			</section>
 			<section class="hwm row align-content-center align-items-center justify-content-center vh-100">
-				<h2>The big day</h2>
-				<h3>1 . December . 2022</h3>
-				<h4>we are so excited to celebrate our special day with family and friends. Thank you so much for visiting our engagement website.</h4>
+				<h2 data-aos="zoom-in">The big day</h2>
+				<h3 data-aos="zoom-in"class=" my-3">1 . December . 2022</h3>
+				<h3 data-aos="zoom-in">we are so excited to celebrate our special day with family and friends. Thank you so much for visiting our engagement website.</h3>
 			</section>
 			<section class="timer row align-content-center align-items-center justify-content-center vh-100">
-				<h2>just some hours...</h2>
-				<div class="row counterDiv">
+				<h2 data-aos="zoom-in">just some hours...</h2>
+				<div data-aos="zoom-in"  data-aos-offset="300"class="row counterDiv my-5">
 					<div class="col-sm-3">
 						<h3 class="daysCount"></h3>
 						<h3 class="days">days</h3>
@@ -300,10 +291,10 @@
 						<h3 class="seconds">seconds</h3>
 					</div>
 				</div>
-				<h2>...until we get eengaged!</h2>
+				<h2 data-aos="zoom-in">...until we get eengaged!</h2>
 			</section>
 			<section class="location text-center row align-content-center align-items-center justify-content-center vh-100">
-				<div class="col-md-6 align-content-center align-items-center justify-content-center">
+				<div data-aos="zoom-in"  data-aos-offset="300"class="col-md-6 align-content-center align-items-center justify-content-center">
 					<div class="row flex-column">
 						<h3 class="col"><i class="bi bi-geo-alt"></i>&nbsp;adress</h3>
 						<h4 class="col">VIP hall,downtown port,suez</h4>
@@ -317,7 +308,7 @@
 						<h4 class="col">07:00 pm</h4>
 					</div>
 				</div>
-				<div class="col-md-6">
+				<div data-aos="zoom-in"  data-aos-offset="300"class="col-md-6">
 					<div class="mapouter">
 						<div class="gmap_canvas">
 							<iframe
@@ -333,8 +324,8 @@
 				</div>
 			</section>
 		</main>
-		<footer class="footer text-center">
-			<div class="d-flex flex-column vh-100 align-content-center align-items-center justify-content-center">
+		<footer class="text-center">
+			<div class="footer d-flex flex-column vh-100 align-content-center align-items-center justify-content-center">
 				<div class="row flex-column">
 					<h2 class="col">Just Engaged</h2>
 					<h3 class="col">waleed & mouda</h3>
@@ -357,8 +348,7 @@
 					</g>
 				</svg>
 			</div>
-			<hr />
-			<h5>made with ❤️ by waleed negm.</h5>
+			<h5 class="">made with ♥️ by waleed negm.</h5>
 		</footer>
 		<div class="preloadingPage d-flex justify-content-center align-content-center align-items-center vh-100 w-100">
 			<img src="./assets/icon/Growing flower.gif" alt="loading" />
@@ -369,7 +359,8 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/CSSRulePlugin.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script>
-		<script src="ScrollMagicCode.js"></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script src="main.js"></script>
 		<script>
 			src = './ScrollMagicCode.js';
 		</script>

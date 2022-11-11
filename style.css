@@ -1,6 +1,8 @@
-* {
+body {
 	font-family: 'Dancing Script', cursive;
 	scroll-behavior: smooth;
+	background-color: #e1dfce;
+	color: #242424;
 }
 /* preloading page */
 .preloadingPage {
@@ -33,6 +35,7 @@
 	z-index: -1;
 }
 .parallax h3,
+.parallax h2,
 .parallax h1 {
 	color: white;
 }
@@ -42,12 +45,17 @@
 .parallaxText .pos {
 	border-right: 2px solid;
 }
+.parallax .std {
+	white-space: nowrap;
+}
 .parallaxText .date {
 	border-left: 2px solid;
 }
-.scrolldownsvg {
+.scrolldown {
 	position: absolute;
-	bottom: 1rem;
+	bottom: 4rem;
+}
+.scrolldownsvg {
 	width: 3rem;
 	height: auto;
 }
@@ -99,11 +107,12 @@
 .mapouter {
 	position: relative;
 	text-align: right;
-	border-radius: 10px;
+	border-radius: 5px;
 	margin: 1rem;
-	padding: 1rem !important;
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+	padding: 0.5rem !important;
+	box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%);
 	height: 300px;
+	background-color: white;
 }
 .gmap_canvas {
 	overflow: hidden;
@@ -121,10 +130,11 @@ iframe {
 
 /* footer */
 .footer {
-	background-color: burlywood;
+	background-color: #461a1c;
 }
 .footer h2,
 .footer h3 {
+	color: white;
 	width: 100%;
 }
 .footersvg {

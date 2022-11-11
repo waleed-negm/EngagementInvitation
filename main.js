@@ -1,5 +1,7 @@
 // @ts-nocheck
 
+AOS.init();
+
 document.onreadystatechange = () => {
 	if (document.readyState === 'complete') {
 		console.log('document ready');
@@ -7,12 +9,17 @@ document.onreadystatechange = () => {
 		window.scrollTo({
 			top: 0,
 		});
+		const pos = document.querySelector('.pos');
+		const std = document.querySelector('.std');
+		const date = document.querySelector('.date');
+		pos.classList.add('animate__animated', 'animate__slow', 'animate__fadeInLeft');
+		std.classList.add('animate__animated', 'animate__slow', 'animate__delay-2s', 'animate__fadeIn');
+		date.classList.add('animate__animated', 'animate__slow', 'animate__fadeInRight');
 		document.querySelector('.preloadingPage').style.opacity = '0';
-		document.querySelector('.preloadingPage').style.zIndex = '99';
+		document.querySelector('.preloadingPage').style.zIndex = '-1';
 	} else document.body.style.overflow = 'hidden';
 };
-
-var controller = new ScrollMagic.Controller();
+if (document.querySelector('.preloadingPage').style.opacity == 0) var controller = new ScrollMagic.Controller();
 
 addEventListener('click', () => console.log('test'));
 //hero image
@@ -37,11 +44,8 @@ new ScrollMagic.Scene({ triggerHook: 0, duration: 2000, tweenChanges: true, trig
 //pin
 new ScrollMagic.Scene({ triggerHook: 0, duration: '100%', tweenChanges: true, triggerElement: '.welcome' }).addIndicators().setPin('.welcome', { pushFollowers: true }).addTo(controller);
 //draw path
-const welcomePath = document.querySelector('#welcomeline');
-var welcomePathlength = welcomePath.getTotalLength();
-welcomePath.style.strokeDasharray = welcomePathlength;
-welcomePath.style.strokeDashoffset = welcomePathlength;
-const welcomePathtween = new TimelineMax().add(TweenMax.to(welcomePath, 1, { strokeDashoffset: 0, ease: Linear.Circ })).add(TweenMax.to(welcomePath, 1, { ease: Linear.Circ }), 0);
+const welcomebacksvgPath = document.querySelector('#welcomebacksvg');
+const welcomePathtween = new TimelineMax().add(TweenMax.fromTo(welcomebacksvgPath, 1, { scale: 0 }, { scale: 1, ease: Linear.Circ })).add(TweenMax.to(welcomebacksvgPath, 1, { ease: Linear.Circ }), 0);
 new ScrollMagic.Scene({ triggerHook: 0, duration: '100%', tweenChanges: true, triggerElement: '.welcome' }).addIndicators().setTween(welcomePathtween).addTo(controller);
 //pin hwm
 new ScrollMagic.Scene({ triggerHook: 0, duration: '100%', tweenChanges: true, triggerElement: '.hwm' }).addIndicators().setPin('.hwm', { pushFollowers: true }).addTo(controller);
