@@ -1,68 +1,90 @@
 * {
-    font-family: 'Dancing Script', cursive;
-    scroll-behavior: smooth;
+	font-family: 'Dancing Script', cursive;
+	scroll-behavior: smooth;
 }
+/* preloading page */
+.preloadingPage {
+	background-color: white !important;
+	top: 0;
+	left: 0;
+	opacity: 1;
+	transition: opacity 1s;
+	transition-timing-function: ease-in;
+	z-index: 9999;
+	position: fixed;
+}
+.preloadingPage img {
+	width: 64px;
+	height: 64px;
+}
+/* end preloading page */
 /* hero section */
 .herosvg {
-    width: 90%;
+	width: 90%;
 }
 .myimage {
-    background-image: url(./images/heroCover.jpg);
-    background-position: top;
-    background-size: 160% 160%;
-    transform: scale(1.5);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+	background-image: url(./images/heroCover.jpg);
+	background-position: top;
+	background-size: 160% 160%;
+	transform: scale(1.5);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
 }
 .parallax h3,
 .parallax h1 {
-    color: white;
+	color: white;
 }
 .parallaxText {
-    width: 100%;
+	width: 100%;
+}
+.parallaxText .pos {
+	border-right: 2px solid;
+}
+.parallaxText .date {
+	border-left: 2px solid;
 }
 .scrolldownsvg {
-    position: absolute;
-    bottom: 1rem;
-    width: 3rem;
-    height: auto;
+	position: absolute;
+	bottom: 1rem;
+	width: 3rem;
+	height: auto;
 }
 /* end hero section */
 
 /* welcome section */
 .welcome {
-    overflow: hidden;
+	overflow: hidden;
 }
 .welcomeHeart {
-    position: absolute;
-    top: 50;
-    left: 0;
-    top: 0;
-    height: 100%;
-    padding: 1rem;
-    width: 100%;
+	position: absolute;
+	top: 50;
+	left: 0;
+	top: 0;
+	height: 100%;
+	padding: 1rem;
+	width: 100%;
 }
 .backsvg {
-    width: 100%;
-    position: absolute;
-    z-index: -1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+	width: 100%;
+	position: absolute;
+	z-index: -1;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 .backsvgline {
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    z-index: -2;
-    top: 0;
-    opacity: 0.3;
-    left: 0;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	z-index: -2;
+	top: 0;
+	opacity: 0.3;
+	left: 0;
 }
 .backsvgline svg {
-    height: 100%;
+	height: 100%;
 }
 /* end welcome section */
 
@@ -75,37 +97,37 @@
 /* location section */
 /* google map */
 .mapouter {
-    position: relative;
-    text-align: right;
-    border-radius: 10px;
-    margin: 1rem;
-    padding: 1rem !important;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-    height: 300px;
+	position: relative;
+	text-align: right;
+	border-radius: 10px;
+	margin: 1rem;
+	padding: 1rem !important;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+	height: 300px;
 }
 .gmap_canvas {
-    overflow: hidden;
-    background: none !important;
-    border-radius: 10px;
-    width: 100%;
-    height: 100%;
+	overflow: hidden;
+	background: none !important;
+	border-radius: 10px;
+	width: 100%;
+	height: 100%;
 }
 iframe {
-    width: 100%;
-    height: 100%;
+	width: 100%;
+	height: 100%;
 }
 /* end google map */
 /* end location section */
 
 /* footer */
 .footer {
-    background-color: burlywood;
+	background-color: burlywood;
 }
 .footer h2,
 .footer h3 {
-    width: 100%;
+	width: 100%;
 }
 .footersvg {
-    width: 90%;
+	width: 90%;
 }
 /* end footer */
