@@ -1,143 +1,207 @@
 body {
-	font-family: 'Dancing Script', cursive;
-	scroll-behavior: smooth;
-	background-color: #e1dfce;
-	color: #242424;
+    font-family: 'Dancing Script', cursive;
+    scroll-behavior: smooth;
+    background-color: #e1dfce;
+    color: #242424;
 }
-/* preloading page */
 .preloadingPage {
-	background-color: white !important;
-	top: 0;
-	left: 0;
-	opacity: 1;
-	transition: opacity 1s;
-	transition-timing-function: ease-in;
-	z-index: 9999;
-	position: fixed;
+    background-color: #e1dfce;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition: opacity 1s;
+    transition-timing-function: ease-in;
+    z-index: 99;
+    position: fixed;
 }
 .preloadingPage img {
-	width: 64px;
-	height: 64px;
+    width: 64px;
+    height: 64px;
 }
-/* end preloading page */
-/* hero section */
 .herosvg {
-	width: 90%;
-}
-.myimage {
-	background-image: url(./images/heroCover.jpg);
-	background-position: top;
-	background-size: 160% 160%;
-	transform: scale(1.5);
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	z-index: -1;
+    width: 90%;
 }
 .parallax h3,
 .parallax h2,
 .parallax h1 {
-	color: white;
+    color: white;
+}
+.myimage {
+    background-image: url(./images/heroCover.jpg);
+    background-position: top;
+    background-size: 160% 160%;
+    transform: scale(1.5);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 .parallaxText {
-	width: 100%;
+    width: 100%;
 }
 .parallaxText .pos {
-	border-right: 2px solid;
+    border-right: 2px solid;
 }
 .parallax .std {
-	white-space: nowrap;
+    white-space: nowrap;
 }
 .parallaxText .date {
-	border-left: 2px solid;
+    border-left: 2px solid;
 }
-.scrolldown {
-	position: absolute;
-	bottom: 4rem;
+/* .scrolldown {
+    position: absolute;
+    bottom: 4rem;
 }
 .scrolldownsvg {
-	width: 3rem;
-	height: auto;
-}
-/* end hero section */
+    width: 3rem;
+    height: auto;
+} */
 
-/* welcome section */
-.welcome {
-	overflow: hidden;
+.demo a {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    z-index: 2;
+    display: inline-block;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(-50%, -50%);
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    transition: opacity 0.3s;
+    color: #e1dfce;
 }
-.welcomeHeart {
-	position: absolute;
-	top: 50;
-	left: 0;
-	top: 0;
-	height: 100%;
-	padding: 1rem;
-	width: 100%;
+.demo a:hover {
+    opacity: 0.5;
+}
+#section03 a {
+    padding-top: 60px;
+}
+#section03 a span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 46px;
+    height: 46px;
+    margin-left: -23px;
+    border: 2px solid #e1dfce;
+    border-radius: 100%;
+    box-sizing: border-box;
+}
+#section03 a span::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: '';
+    width: 16px;
+    height: 16px;
+    margin: -12px 0 0 -8px;
+    border-left: 2px solid #e1dfce;
+    border-bottom: 2px solid #e1dfce;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    box-sizing: border-box;
+}
+#section03 a span::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    content: '';
+    width: 44px;
+    height: 44px;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2);
+    border-radius: 100%;
+    opacity: 0;
+    -webkit-animation: sdb03 3s infinite;
+    animation: sdb03 3s infinite;
+    box-sizing: border-box;
+}
+@-webkit-keyframes sdb03 {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    60% {
+        box-shadow: 0 0 0 60px rgba(255, 255, 255, 0.2);
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes sdb03 {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    60% {
+        box-shadow: 0 0 0 60px rgba(255, 255, 255, 0.2);
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.welcome {
+    overflow: hidden;
 }
 .backsvg {
-	width: 100%;
-	position: absolute;
-	z-index: -1;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .backsvgline {
-	height: 100%;
-	position: absolute;
-	width: 100%;
-	z-index: -2;
-	top: 0;
-	opacity: 0.3;
-	left: 0;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: -2;
+    top: 0;
+    opacity: 0.3;
+    left: 0;
 }
 .backsvgline svg {
-	height: 100%;
+    height: 100%;
 }
-/* end welcome section */
-
-/* hwm section */
-/*  end hwm section */
-
-/* timer section */
-/* end timer section */
-
-/* location section */
-/* google map */
 .mapouter {
-	position: relative;
-	text-align: right;
-	border-radius: 5px;
-	margin: 1rem;
-	padding: 0.5rem !important;
-	box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%);
-	height: 300px;
-	background-color: white;
+    position: relative;
+    text-align: right;
+    border-radius: 5px;
+    margin: 1rem;
+    padding: 0.5rem !important;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%);
+    height: 300px;
+    background-color: white;
 }
 .gmap_canvas {
-	overflow: hidden;
-	background: none !important;
-	border-radius: 10px;
-	width: 100%;
-	height: 100%;
+    overflow: hidden;
+    background: none !important;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
 }
 iframe {
-	width: 100%;
-	height: 100%;
+    width: 100%;
+    height: 100%;
 }
-/* end google map */
-/* end location section */
-
-/* footer */
 .footer {
-	background-color: #461a1c;
+    background-color: #461a1c;
 }
 .footer h2,
 .footer h3 {
-	color: white;
-	width: 100%;
+    color: white;
+    width: 100%;
 }
 .footersvg {
-	width: 90%;
+    width: 90%;
 }
-/* end footer */
+footer h5 {
+    margin-top: 0.5rem;
+}
