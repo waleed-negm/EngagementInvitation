@@ -112,8 +112,8 @@ body {
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2);
     border-radius: 100%;
     opacity: 0;
-    -webkit-animation: sdb03 1s infinite;
-    animation: sdb03 1s infinite;
+    -webkit-animation: sdb03 1.8s infinite;
+    animation: sdb03 1.8s infinite;
     box-sizing: border-box;
 }
 @-webkit-keyframes sdb03 {
